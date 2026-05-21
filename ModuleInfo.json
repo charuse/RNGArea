@@ -1,7 +1,7 @@
 {
   "Name": "RNGArea",
   "Author": "charuse",
-  "Description": "Switch on/off SW_A due to obj_arg0 1-100",
+  "Description": "AreaObj with customizable random chance for SW_A",
   "InstallDependencies": ["Syati_ObjectFactories", "ExtAreaObjMgr"],
   "SupportedGames": [
     "SB4E"

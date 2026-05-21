@@ -10,7 +10,5 @@ public:
     virtual void movement();
     virtual const char* getManagerName() const;
 
-    OSTick mTick;
-    s32 mArg;
-    bool mRoll;
+    bool mGo;
 };
