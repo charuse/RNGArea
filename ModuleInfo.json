@@ -1,0 +1,29 @@
+{
+  "Name": "RNGArea",
+  "Author": "charuse",
+  "Description": "Switch on/off SW_A due to obj_arg0 1-100",
+  "InstallDependencies": ["Syati_ObjectFactories", "ExtAreaObjMgr"],
+  "SupportedGames": [
+    "SB4E"
+  ],
+  "ModuleData" : [
+    {
+      "NameObjFactory" : [
+        {
+          "Name" : "RNGArea",
+          "Function" : "createExtActor<RNGArea>",
+          "Include" : "RNGArea.h"
+        }
+      ]
+    },
+    {
+      "AreaObjMgr" : [
+        {
+          "Name" : "RNGArea",
+          "MaxCount" : "64",
+          "Function" : "AreaObjContainer::createManager<AreaObjMgr>"
+        }
+      ]
+    }
+  ]
+}

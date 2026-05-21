@@ -1,0 +1,7 @@
+{
+  "Version": 1,
+  "Files": [
+    "include/RNGArea.h",
+    "source/RNGArea.cpp"
+  ]
+}
