@@ -10,5 +10,7 @@ public:
     virtual void movement();
     virtual const char* getManagerName() const;
 
+    s32 mArg0;
+    bool mArg1;
     bool mGo;
 };
