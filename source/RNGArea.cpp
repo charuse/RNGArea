@@ -9,24 +9,22 @@ void RNGArea::init(const JMapInfoIter &rIter) {
     AreaObj::init(rIter);
     connectToSceneAreaObj(this);
     mArg0 = mObjArg0;
-    mArg1 = mObjArg1;
 }
 
 bool RNGArea::rng() {
-    if (mArg0 <= 0) return false;
-    u32 seed = OSGetTick() * 1664525 + 1013904223;
-    s32 cSeed = (s32)(abs(seed % 100));
-    //OSReport("[RNGArea] Testing %d vs %d\n", cSeed, mArg0);
-    return (cSeed < mArg0);
+    if (mArg0 < 1) return false;
+    JMath::TRandom_fast_ mRand(OSGetTick());
+    rand = abs(mRand.rand());
+    res = (s32)(((rand ^ (rand >> 16)) % 100) + 1);
+    //OSReport("[RNGArea] Testing %d <= %d\n", res, mArg0);
+    return (res <= mArg0);
 }
 
 void RNGArea::movement() {
     if (mGo && isInVolume(*getPlayerPos())) {
         mGo = false;
         rng() ? onSwitchA() : offSwitchA();
-        if (mArg1) mGo = true;
     }
-
 }
 
 const char* RNGArea::getManagerName() const {

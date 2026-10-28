@@ -4,7 +4,11 @@
   "Description": "AreaObj with customizable random chance for SW_A",
   "InstallDependencies": ["Syati_ObjectFactories", "ExtAreaObjMgr"],
   "SupportedGames": [
-    "SB4E"
+    "SB4E",
+    "SB4P",
+    "SB4J",
+    "SB4K",
+    "SB4W"
   ],
   "ModuleData" : [
     {

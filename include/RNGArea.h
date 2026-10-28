@@ -10,7 +10,8 @@ public:
     virtual void movement();
     virtual const char* getManagerName() const;
 
+    u32 rand;
+    s32 res;
     s32 mArg0;
-    bool mArg1;
     bool mGo;
 };
